@@ -17,3 +17,11 @@
 
 ![version](version.png)
 
+## Line numbering (nlinum)
+![Line numbering](nlinum.png)
+
+## Syntax checking (flycheck)
+![Syntax checking](flycheck.png)
+
+## Auto-completion (company-mode)
+![Auto completion](company.png)

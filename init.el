@@ -34,7 +34,7 @@
        jump            ; helping you navigate your code base
        snippets        ; my elves. They type so I don't have to
        file-templates  ; auto-snippets for empty files
-       spellcheck      ; tasing you for misspelling mispelling
+       ;; spellcheck      ; tasing you for misspelling mispelling
        syntax-checker  ; tasing you for every forgotten semicolon
        version-control ; remember, remember that commit in November
        workspaces      ; tab emulation, persistence and separate workspaces
@@ -110,4 +110,5 @@
 
 ;; Customization
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-(set-frame-font "Operator Mono 18" nil t)
+(set-frame-font "Operator Mono 22" nil t)
+

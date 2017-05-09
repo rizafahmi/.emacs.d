@@ -17,12 +17,19 @@
   (add-hook! 'js2-mode-hook (setq js-switch-indent-offset js-indent-level))
 
   ;; Favor local eslint over global, if available
+  ;(add-hook! 'flycheck-mode-hook
+  ;  (when (derived-mode-p 'js-mode 'js2-mode)
+  ;    (when-let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" (doom-project-root)))
+  ;               (exists-p (file-exists-p eslint))
+  ;               (executable-p (file-executable-p eslint)))
+  ;      (setq-local flycheck-javascript-eslint-executable eslint))))
+
   (add-hook! 'flycheck-mode-hook
     (when (derived-mode-p 'js-mode 'js2-mode)
-      (when-let ((eslint (expand-file-name "node_modules/eslint/bin/eslint.js" (doom-project-root)))
-                 (exists-p (file-exists-p eslint))
-                 (executable-p (file-executable-p eslint)))
-        (setq-local flycheck-javascript-eslint-executable eslint))))
+      (when-let ((standard (expand-file-name "/Users/riza/.nvm/versions/node/v6.9.1/bin/standard" (doom-project-root)))
+                 (exists-p (file-exists-p standard))
+                 (executable-p (file-executable-p standard)))
+        (setq-local flycheck-javascript-standard-executable standard))))
 
   (set! :repl 'js2-mode '+javascript/repl)
   (set! :electric 'js2-mode :chars '(?\} ?\) ?.))

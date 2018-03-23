@@ -232,7 +232,7 @@ across windows."
   :init
   (setq evil-escape-excluded-states '(normal visual multiedit emacs motion)
         evil-escape-excluded-major-modes '(neotree-mode)
-        evil-escape-key-sequence "jk"
+        evil-escape-key-sequence "jj"
         evil-escape-delay 0.25)
   (add-hook 'doom-post-init-hook #'evil-escape-mode)
   :config
